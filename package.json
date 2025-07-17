@@ -1,0 +1,36 @@
+{
+  "name": "crane-generator",
+  "version": "1.0.0",
+  "description": "CLI para generar módulos CRUD desde una base de datos MySQL",
+  "main": "dist/index.js",
+  "bin": {
+    "crane": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "ts-node src/index.ts"
+  },
+  "keywords": [
+    "cli",
+    "crud",
+    "mysql",
+    "typescript",
+    "codegen"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "fs-extra": "^11.0.0",
+    "mysql2": "^3.0.0",
+    "path": "^0.12.7",
+    "yargs": "^17.0.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^24.0.14",
+    "@types/yargs": "^17.0.33",
+    "prettier": "^3.6.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
