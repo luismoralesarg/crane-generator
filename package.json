@@ -2,9 +2,9 @@
   "name": "crane-generator",
   "version": "1.0.0",
   "description": "CLI para generar módulos CRUD desde una base de datos MySQL",
-  "main": "dist/index.js",
+  "main": "dist/bin/index.js",
   "bin": {
-    "crane": "dist/index.js"
+    "crane": "dist/bin/index.js"
   },
   "scripts": {
     "build": "tsc",
