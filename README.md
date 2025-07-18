@@ -1,17 +1,21 @@
-# crane-generator
+# 🚢 crane-generator
 
-CLI para generar módulos CRUD en TypeScript desde una base de datos MySQL.
+A CLI to generate TypeScript CRUD modules from a MySQL database.
 
-## Descripción
+---
 
-`crane-generator` es una herramienta de línea de comandos que automatiza la creación de módulos CRUD (Create, Read, Update, Delete) en TypeScript, basándose en la introspección de una base de datos MySQL existente. Genera archivos de modelo, servicio, controlador y rutas para cada tabla detectada en la base de datos.
+## 📖 Description
 
-## Instalación
+`crane-generator` is a command-line tool that automates the creation of CRUD (Create, Read, Update, Delete) modules in TypeScript by introspecting an existing MySQL database. For each detected table, it generates model, service, controller, and route files.
+
+---
+
+## ⚡ Installation
 
 ```bash
 npm install -g crane-generator
 ```
-O bien, clona este repositorio y ejecuta localmente:
+Or clone this repository and run locally:
 ```bash
 git clone <repo-url>
 cd crane-generator
@@ -19,39 +23,43 @@ npm install
 npm run build
 ```
 
-## Uso
+---
 
-Ejecuta el generador desde la línea de comandos:
+## 🚀 Usage
+
+Run the generator from the command line:
 
 ```bash
 crane \
   --host <host> \
-  --user <usuario> \
-  --password <contraseña> \
-  --database <nombre_db> \
-  [--port <puerto>] \
-  [--output <directorio_destino>]
+  --user <user> \
+  --password <password> \
+  --database <database> \
+  [--port <port>] \
+  [--output <output-directory>]
 ```
 
-### Opciones CLI
-- `--host` (**requerido**): Host de la base de datos MySQL
-- `--user` (**requerido**): Usuario de la base de datos
-- `--password` (**requerido**): Contraseña del usuario
-- `--database` (**requerido**): Nombre de la base de datos
-- `--port`: Puerto de conexión (por defecto: 3306)
-- `--output`: Carpeta destino para los módulos generados (por defecto: el directorio actual)
+### 🛠️ CLI Options
+- `--host` (**required**) 🖥️: MySQL database host
+- `--user` (**required**) 👤: Database user
+- `--password` (**required**) 🔑: User password
+- `--database` (**required**) 🗄️: Database name
+- `--port` (default: 3306) 🚪: Connection port
+- `--output` (default: current directory) 📁: Output folder for generated modules
 
-### Ejemplo
+### 💡 Example
 ```bash
-crane --host localhost --user root --password 1234 --database mi_db --output ./src
+crane --host localhost --user root --password 1234 --database my_db --output ./src
 ```
-Esto generará, por cada tabla, los archivos:
-- `modules/<tabla>/<tabla>.model.ts`
-- `modules/<tabla>/<tabla>.service.ts`
-- `modules/<tabla>/<tabla>.controller.ts`
-- `modules/<tabla>/<tabla>.routes.ts`
+This will generate, for each table, the following files:
+- `modules/<table>/<table>.model.ts`
+- `modules/<table>/<table>.service.ts`
+- `modules/<table>/<table>.controller.ts`
+- `modules/<table>/<table>.routes.ts`
 
-## Estructura del Proyecto
+---
+
+## 🗂️ Project Structure
 ```
 crane-generator/
 ├── src/
