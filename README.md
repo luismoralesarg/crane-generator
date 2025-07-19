@@ -45,13 +45,28 @@ crane \
 - `--password` (**required**) 🔑: User password
 - `--database` (**required**) 🗄️: Database name
 - `--port` (default: 3306) 🚪: Connection port
-- `--output` (default: current directory) 📁: Output folder for generated modules
+- `--output` (default: `./src`) 📁: Output folder for generated modules
+- `--tables` (optional) 📋: Comma-separated list of tables to generate (default: all tables)
+- `--verbose` (flag) 🔍: Show detailed logs
 
-### 💡 Example
+### 💡 Examples
+
+**Basic usage (all tables):**
 ```bash
 crane --host localhost --user root --password 1234 --database my_db --output ./src
 ```
-This will generate, for each table, the following files:
+
+**Generate specific tables only:**
+```bash
+crane --host localhost --user root --password 1234 --database my_db --tables users,products,orders
+```
+
+**Verbose output:**
+```bash
+crane --host localhost --user root --password 1234 --database my_db --tables users,products --verbose
+```
+
+This will generate, for each specified table, the following files:
 - `modules/<table>/<table>.model.ts`
 - `modules/<table>/<table>.service.ts`
 - `modules/<table>/<table>.controller.ts`
